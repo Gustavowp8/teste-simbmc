@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIMBMC</title>
+    <link rel="stylesheet" href="estilo/fale-conosco.css">
+    <script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 8,00;
+        document.getElementById('cTot').value = tot;
+    }
+    </script>
+</head>
+<body>
+    
+        <input type="checkbox" name="" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+    
+        <nav class="menu">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="aluguel.html">Aluguel</a>
+                <ul>
+                    <li><a href="mesas-cadeiras.html">Mesas e cadeiras</a></li>
+                    <li><a href="iluminação.html">Iluminação</a></li><li>
+                    <li><a href="som.html">Som</a></li>
+                </ul>
+                </li>
+                <li><a href="eventos.html">Eventos</a>
+                <ul>
+                        <li><a href="djs.html">DJ's</a></li>
+                        <li><a href="social.html">Social Eventos</a></li>
+                </ul>
+                </li>
+                <li><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+
+<header>
+    <img src="imagens/logopequeno.png"/>
+</header>
+
+<section>
+<div>
+    <h2>Fale conosco</h2>
+</div></br>
+    <form method="POST" id="fContato" action="mailto:gustavoferreira73@live.com" oninput="calc_total();">
+
+        <fieldset id="usuario"><legend>Indetificação do Usuario</legend>
+        <p>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"/></p></br>
+        <p>E-mail:<input type="email" name="tMail" id="cMail" size="20" maxlength="30" placeholder="Seu Email @"/></p></br>
+        <p>Telefone:<input type="number" name="tNum" id="cNum" size="20" maxlength="30" placeholder="Numero de telefone"/></p></br>
+        </fieldset>
+
+        <fieldset id="endereço"><legend>Endereço</legend>
+        <p>Logradouro:<input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav"/></p></br>
+        <p>Numero:<input type="number" name="tNume" id="cNume" min="0" max="999999"/></p></br>
+        <p><label for="cEst">Estado:</label>
+        <select name="tEst" id="cEst">
+            <option>Goias</option>
+            <option>Distrito Federal</option>
+        </select></p></br>
+        <p><label for="cCid">Cidade:</label>
+        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"/></p></br>
+        <datalist id="cidades">
+            <option>Planaltina</option>
+            <option>Sobradinho</option>
+            <option>Brasilia</option>
+            <option>Formosa</option>
+        </datalist>
+        </fieldset>
+
+        <fieldset id="pedido"><legend>Pedido</legend>
+        <p>Alugar Iluminação:  <input type="checkbox" name="alu" id="ilu"/></p>
+        <p>Alugar Som:         <input type="checkbox" name="som" id="ilu"/></p>
+        <p>Alular Brinquedos:  <input type="checkbox" name="brin" id="ilu"/></p>
+
+        <p><label for="cQtd">Alugar messas e cadeiras:</label>
+        <input type="number" name="tQtd" id="cQtd" min="0" max="200" value="0"/></p></br>
+        <p><label>Preço Total de mesas: R$</label>
+        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar mesas" readonly/></p>
+
+        </br><input type="submit" name="tEnviar" id="botao" value="Enviar"></br></br>
+        <a href="https://wa.me/5561993628634?text=sua%20mensagem" target="blank">Fale agora pelo WhatsApp</a></br></br>
+
+        Para entra em contato por telefone:</br> 61 99362-8634
+
+        </fieldset>
+
+    </form>
+
+</section>
+
+<footer>
+</br><p>&copy; G{code}</p>
+</footer>
+
+</body>
+</html>
